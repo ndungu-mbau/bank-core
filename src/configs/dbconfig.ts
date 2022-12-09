@@ -1,7 +1,7 @@
 export const dbconfig = {
-    host: process.env.DB_HOST || "localhost",
-    port: process.env.DB_PORT || "5432",
-    user: process.env.DB_USER || "postgres",
-    password: process.env.DB_PASSWORD || "alpine",
-    database: process.env.DB_DATABASE || "test",
+    host: process.env.PGHOST || "localhost",
+    port: process.env.PGPORT || "5432",
+    user: process.env.PGUSER || "postgres",
+    password: process.env.PGPASSWORD || "alpine",
+    database: process.env.PGDATABASE || "test",
 };

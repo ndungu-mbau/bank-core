@@ -12,7 +12,11 @@ const { port } = appconfig;
 export const koa = new Koa();
 
 export const startServer = () => {
-    koa.use(koaCors());
+    koa.use(
+        koaCors({
+            origin: "*",
+        })
+    );
     koa.use(errorHandler);
     koa.use(koaBody());
     koa.use(combinedRouter());
